@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\base64-decode.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\handshake.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\libwebsockets.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\service.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\pollfd.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\output.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\parsers.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\context.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\alloc.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\header.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client-handshake.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client-parser.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl-server.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl-client.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\sha-1.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\lws-plat-win.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\server.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\server-handshake.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\extension.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\extension-permessage-deflate.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ranges.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\fops-zip.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\win32port\win32helpers\gettimeofday.c">
+      <Filter>Headers Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\libuv.c">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers Private">
+      <UniqueIdentifier>{483A845E-35B4-3905-8029-E8D35A6C7966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers Public">
+      <UniqueIdentifier>{DA728D96-CBD6-3F4B-B52E-D76AA8143EF5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{09168C42-CC63-30D7-ABC9-41A1D54C482F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

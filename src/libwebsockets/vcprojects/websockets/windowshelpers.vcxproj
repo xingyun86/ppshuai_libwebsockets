@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{CF95E554-3AD5-33A0-9312-57BE74C71C8C}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>windowshelpers</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\libwebsockets;..\..\sources\libwebsockets\lib;..\..\sources\libwebsockets\deps\libuv\include;..\..\sources\libwebsockets\win32port\win32helpers;..\..\sources\libwebsockets\deps\zlib\include;..\..\sources\libwebsockets\deps\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>XCOPY $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)libwebsockets-publish\lib\$(Platform)\$(Configuration)\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\include $(SolutionDir)libwebsockets-publish\include\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\win32port\win32helpers\*.h $(SolutionDir)libwebsockets-publish\include\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\deps\* $(SolutionDir)libwebsockets-publish\include\ /S /Y
+@REM DEL /S /Q $(SolutionDir)libwebsockets-publish\*.c*</Command>
+    </PostBuildEvent>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\sources\libwebsockets;..\..\sources\libwebsockets\lib;..\..\sources\libwebsockets\deps\libuv\include;..\..\sources\libwebsockets\win32port\win32helpers;..\..\sources\libwebsockets\deps\zlib\include;..\..\sources\libwebsockets\deps\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>XCOPY $(OutDir)$(TargetName)$(TargetExt) $(SolutionDir)libwebsockets-publish\lib\$(Platform)\$(Configuration)\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\include $(SolutionDir)libwebsockets-publish\include\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\win32port\win32helpers\*.h $(SolutionDir)libwebsockets-publish\include\ /S /Y
+XCOPY $(SolutionDir)sources\libwebsockets\deps\* $(SolutionDir)libwebsockets-publish\include\ /S /Y
+@REM DEL /S /Q $(SolutionDir)libwebsockets-publish\*.c*</Command>
+    </PostBuildEvent>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sources\libwebsockets\lib\base64-decode.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\handshake.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\libuv.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\libwebsockets.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\service.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\pollfd.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\output.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\parsers.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\context.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\alloc.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\header.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client-handshake.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\client-parser.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl-server.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ssl-client.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\sha-1.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\lws-plat-win.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\server.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\server-handshake.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\extension.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\extension-permessage-deflate.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\ranges.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\lib\fops-zip.c" />
+    <ClCompile Include="..\..\sources\libwebsockets\win32port\win32helpers\gettimeofday.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
